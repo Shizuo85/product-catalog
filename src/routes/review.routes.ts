@@ -15,7 +15,8 @@ reviewRouter.post(
 );
 
 reviewRouter.get(
-    '/all',
+    '/all/:id',
+    generalMiddleware.sanitizeParams,
     reviewMiddleware.fetchReviews,
     reviewController.fetchReviews
 );

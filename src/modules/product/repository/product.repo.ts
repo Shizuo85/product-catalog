@@ -46,9 +46,16 @@ class ProductRepo {
                         },
                         {
                             $group: {
-                                _id: '$product',
+                                _id: null,
                                 averageRating: { $avg: '$rating' },
                                 reviews: { $sum: 1 }
+                            },
+                        },
+                        {
+                            $project: {
+                                _id: 0,
+                                averageRating: { $round: ['$averageRating', 2] },
+                                reviews: 1
                             },
                         },
                     ],

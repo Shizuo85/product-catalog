@@ -17,7 +17,7 @@ class ReviewController {
 
     async fetchReviews(req: Request, res: Response, next: NextFunction) {
         try {
-            const user = await reviewService.fetchReviews(req.query);
+            const user = await reviewService.fetchReviews({...req.query, ...req.params});
             return res.status(200).json(user);
         } catch (err) {
             return next(err);
