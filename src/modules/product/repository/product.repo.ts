@@ -5,11 +5,7 @@ class ProductRepo {
         return await productModel.create(data);
     }
 
-    async findOne(filter: any) {
-        return await productModel.findOne(filter);
-    }
-
-    async findOneSelect(filter: any, select: any = {}) {
+    async findOne(filter: any, select: any = {}) {
         return await productModel.findOne(filter).select(select);
     }
 

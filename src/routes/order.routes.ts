@@ -8,13 +8,15 @@ import generalMiddleware from '../modules/general/middleware/general.middleware'
 const orderRouter = Router();
 
 orderRouter.post(
-    '/create',
+    '/create/:id',
+    generalMiddleware.sanitizeParams,
     orderMiddleware.createOrder,
     orderController.createOrder
 );
 
 orderRouter.get(
-    '/all',
+    '/all/:id',
+    generalMiddleware.sanitizeParams,
     orderMiddleware.fetchOrders,
     orderController.fetchOrders
 );

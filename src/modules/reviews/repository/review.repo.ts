@@ -5,11 +5,7 @@ class ReviewRepo {
         return await reviewModel.create(data);
     }
 
-    async findOne(filter: any) {
-        return await reviewModel.findOne(filter);
-    }
-
-    async findOneSelect(filter: any, select: any = {}) {
+    async findOne(filter: any, select: any = {}) {
         return await reviewModel.findOne(filter).select(select);
     }
 

@@ -4,17 +4,18 @@ const orderSchema = new mongoose.Schema(
     {
         product: {
             type: mongoose.Types.ObjectId,
-            required: true
+            required: true,
         },
         quantity: {
             type: Number,
             min: 1,
-            requied: true
+            requied: true,
         },
         status: {
             type: String,
-            enum: ["shipped","delivered", "canceled"],
-            requied: true 
+            enum: ['processing', 'shipped', 'delivered', 'canceled'],
+            requied: true,
+            default: 'processing',
         },
     },
     { timestamps: true }
