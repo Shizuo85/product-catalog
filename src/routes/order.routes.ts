@@ -9,7 +9,7 @@ const orderRouter = Router();
 
 /**
  * @swagger
- * /orders/create/{id}:
+ * /api/v1/orders/create/{id}:
  *   post:
  *     summary: Create an order for a product
  *     tags: [Orders]
@@ -55,7 +55,7 @@ orderRouter.post(
 
 /**
  * @swagger
- * /orders/all/{id}:
+ * /api/v1/orders/all/{id}:
  *   get:
  *     summary: Get paginated and filtered orders for a product
  *     description: |
@@ -128,7 +128,7 @@ orderRouter.get(
 
 /**
  * @swagger
- * /orders/edit/{id}:
+ * /api/v1/orders/edit/{id}:
  *   patch:
  *     summary: Update an existing order
  *     description: |

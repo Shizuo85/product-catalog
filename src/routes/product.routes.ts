@@ -9,7 +9,7 @@ const productRouter = Router();
 
 /**
  * @swagger
- * /products/create:
+ * /api/v1/product/create:
  *   post:
  *     summary: Create a new product
  *     description: |
@@ -65,7 +65,7 @@ productRouter.post(
 
 /**
  * @swagger
- * /products/all:
+ * /api/v1/product/all:
  *   get:
  *     summary: Get filtered products
  *     description: |
@@ -132,7 +132,7 @@ productRouter.get(
 
 /**
  * @swagger
- * /products/edit/{id}:
+ * /api/v1/product/edit/{id}:
  *   patch:
  *     summary: Update a product
  *     description: |

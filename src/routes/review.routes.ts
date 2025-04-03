@@ -9,7 +9,7 @@ const reviewRouter = Router();
 
 /**
  * @swagger
- * /reviews/create/{id}:
+ * /api/v1/reviews/create/{id}:
  *   post:
  *     summary: Create a product review
  *     description: |
@@ -68,7 +68,7 @@ reviewRouter.post(
 
   /**
  * @swagger
- * /reviews/all/{id}:
+ * /api/v1/reviews/all/{id}:
  *   get:
  *     summary: Get product reviews
  *     description: |
@@ -140,7 +140,7 @@ reviewRouter.get(
 
 /**
  * @swagger
- * /reviews/edit/{id}:
+ * /api/v1/reviews/edit/{id}:
  *   patch:
  *     summary: Update a review
  *     description: |
