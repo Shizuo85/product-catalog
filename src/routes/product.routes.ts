@@ -30,10 +30,12 @@ const productRouter = Router();
  *                 example: "Premium Headphones"
  *               category:
  *                 type: string
- *                 example: "electronics"
+ *                 example: "shirts"
+ *                 enum: [shirts, skirts, socks, shorts, sweater]
  *               variant:
  *                 type: string
- *                 example: "wireless"
+ *                 example: "s"
+ *                 enum: [s, l, xl, xxl, xxxl]
  *               inventory:
  *                 type: integer
  *                 example: 100
@@ -85,13 +87,15 @@ productRouter.post(
  *         description: Filter by category
  *         schema:
  *           type: string
- *           example: "electronics"
+ *           example: "shirts"
+ *           enum: [shirts, skirts, socks, shorts, sweater]
  *       - in: query
  *         name: variant
  *         description: Filter by variant
  *         schema:
  *           type: string
- *           example: "wireless"
+ *           example: "s"
+ *           enum: [s, l, xl, xxl, xxxl]
  *       - in: query
  *         name: page
  *         description: Page number (1-based)
