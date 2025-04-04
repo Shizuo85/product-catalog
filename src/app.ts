@@ -21,24 +21,27 @@ app.set('trust proxy', true);
 // Swagger configuration
 const options = {
     definition: {
-      openapi: '3.0.0',
-      info: {
-        title: 'My API',
-        version: '1.0.0',
-        description: 'API documentation using swagger-jsdoc',
-      },
-      servers: [
-        { url: `http://localhost:${process.env.PORT || 3000}`, description: 'Local server' },
-      ],
+        openapi: '3.0.0',
+        info: {
+            title: 'My API',
+            version: '1.0.0',
+            description: 'API documentation using swagger-jsdoc',
+        },
+        servers: [
+            {
+                url:
+                    process.env.WEB_URL,
+                description: 'Local server',
+            },
+        ],
     },
     apis: ['./src/routes/*.ts'],
-  };
-  
-  const specs = swaggerJsdoc(options);
-  
-  // Serve Swagger UI
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-  
+};
+
+const specs = swaggerJsdoc(options);
+
+// Serve Swagger UI
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 app.use((req: Request, res: Response, next: NextFunction) => {
     logger.info(
