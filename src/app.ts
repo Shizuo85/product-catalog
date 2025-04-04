@@ -29,8 +29,7 @@ const options = {
         },
         servers: [
             {
-                url:
-                    process.env.WEB_URL,
+                url: process.env.WEB_URL,
                 description: 'Local server',
             },
         ],
