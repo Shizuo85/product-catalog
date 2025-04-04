@@ -57,6 +57,8 @@ const reviewRouter = Router();
  *           Possible errors:
  *           - Missing/invalid rating or review
  *           - Rating outside 0-5 range
+ *       500:
+ *         description: Internal Server Error
  */
 
 reviewRouter.post(
@@ -129,6 +131,8 @@ reviewRouter.post(
  *                 total_reviews: 15
  *                 page: 1
  *                 total_pages: 2
+ *       500:
+ *         description: Internal Server Error
  */
 
 reviewRouter.get(
@@ -191,6 +195,8 @@ reviewRouter.get(
  *             example:
  *               error: "Review not found"
  *               status: 404
+ *       500:
+ *         description: Internal Server Error
  */
 
 reviewRouter.patch(

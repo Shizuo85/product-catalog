@@ -57,6 +57,8 @@ const productRouter = Router();
  *             example:
  *               error: "This product already exists"
  *               status: 400
+ *       500:
+ *         description: Internal Server Error
  */
 
 productRouter.post(
@@ -126,6 +128,8 @@ productRouter.post(
  *                 total_products: 25
  *                 page: 2
  *                 total_pages: 3
+ *       500:
+ *         description: Internal Server Error
  */
 
 productRouter.get(
@@ -183,6 +187,8 @@ productRouter.get(
  *               status: 400
  *       404:
  *         description: Product not found
+ *       500:
+ *         description: Internal Server Error
  */
 
 productRouter.patch(

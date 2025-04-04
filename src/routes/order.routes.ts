@@ -44,6 +44,8 @@ const orderRouter = Router();
  *         description: Invalid quantity
  *       404:
  *         description: Product not found
+ *       500:
+ *         description: Internal Server Error
  */
 
 orderRouter.post(
@@ -118,6 +120,8 @@ orderRouter.post(
  *                 total_pages: 3
  *       422:
  *         description: Invalid query parameters
+ *       500:
+ *         description: Internal Server Error
  */
 orderRouter.get(
     '/all/:id',
@@ -175,6 +179,8 @@ orderRouter.get(
  *               status: 404
  *       422:
  *         description: Invalid update data
+ *       500:
+ *         description: Internal Server Error
  */
 
 orderRouter.patch(
